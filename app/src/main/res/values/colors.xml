@@ -2,7 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="reddish">#88423E</color>
+    <color name="reddish">#994341</color>
     <color name="grey">#849597</color>
+    <color name="betterreddish">#995A5B</color>
+
 
 </resources>

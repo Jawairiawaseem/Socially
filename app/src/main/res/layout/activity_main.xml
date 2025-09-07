@@ -8,10 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-
-
     <ImageView
         android:id="@+id/logo"
         android:layout_width="500dp"
