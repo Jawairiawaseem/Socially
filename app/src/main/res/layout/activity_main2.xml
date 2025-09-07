@@ -15,9 +15,9 @@
         android:layout_weight="9"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:layout_marginBottom="200dp"
+        android:gravity="center"
 
-        tools:ignore="ExtraText">
+        >
 
 
         
@@ -33,40 +33,66 @@
             android:fontFamily="sans-serif"
             android:shadowColor="@color/reddish"
             >
+        </TextView>
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/baseline_account_circle_24"
+            android:layout_below="@id/logo"
+            android:id="@+id/icon"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="jacob_w"
+            android:textColor="@color/black"
+            android:id="@+id/username"
+            android:layout_below="@id/icon"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15dp"
+
+
+            >
 
 
         </TextView>
-
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
-            android:text="Log in"
-            android:layout_below="@id/logo"
-            app:cornerRadius="7dp"
+            android:layout_below="@id/username"
             android:layout_marginHorizontal="@android:dimen/app_icon_size"
+
             android:backgroundTint="@color/reddish"
-            android:textSize="17dp"
             android:padding="16dp"
-            >
+            android:text="Log in"
+            android:textSize="17dp"
+            app:cornerRadius="7dp"
+           >
 
 
         </Button>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Switch Accounts"
+            android:layout_height="40dp"
+            android:text="Switch accounts"
             android:textColor="@color/reddish"
             android:textStyle="bold"
             android:textSize="18dp"
-            android:layout_marginTop="30dp"
             android:layout_centerInParent="true"
             android:layout_below="@id/login"
             android:gravity="center"
-            android:fontFamily="sans-serif">
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="10dp">
 
 
 
