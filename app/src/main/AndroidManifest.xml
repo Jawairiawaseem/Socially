@@ -12,8 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221274">
         <activity
-            android:name=".signupActivity"
+            android:name=".HomeScreen"
             android:exported="false" />
+        <activity
+            android:name=".loginform"
+            android:exported="false" />
+        <activity
+            android:name=".signupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />

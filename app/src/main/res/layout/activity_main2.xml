@@ -64,7 +64,7 @@
 
         </TextView>
         <Button
-            android:id="@+id/login"
+            android:id="@+id/loginbtn"
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
@@ -82,14 +82,15 @@
         </Button>
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/gotologinform"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="Switch accounts"
             android:textColor="@color/reddish"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_centerInParent="true"
-            android:layout_below="@id/login"
+            android:layout_below="@id/loginbtn"
             android:gravity="center"
             android:fontFamily="sans-serif"
             android:layout_marginTop="10dp">

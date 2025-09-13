@@ -2,9 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="transwhite">#C7FFFFFF</color>
     <color name="reddish">#994341</color>
     <color name="grey">#849597</color>
     <color name="betterreddish">#995A5B</color>
+    <color name="pinkish">#9C5354</color>
+    <color name="signupbuttonpink">#E78288</color>
+    <color name="loginbtn2">#D09E9D</color>
+    <color name="divider">#7CBDB3B3</color>
+    <color name="hint">#7CBDB3B3</color>
 
 
 </resources>
