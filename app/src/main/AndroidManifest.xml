@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221274">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".ViewStory"
             android:exported="false" />
         <activity
