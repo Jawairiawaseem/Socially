@@ -18,6 +18,7 @@
 
         >
         <TextView
+            android:id="@+id/followingtv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -29,6 +30,7 @@
 
             />
         <TextView
+            android:id="@+id/youtv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -128,6 +130,7 @@
         android:layout_marginBottom="15dp"
         >
         <ImageView
+            android:id="@+id/homeiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -135,7 +138,7 @@
             ></ImageView>
 
         <ImageView
-            android:id="@+id/explore"
+            android:id="@+id/exploreiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -143,6 +146,7 @@
             ></ImageView>
 
         <ImageView
+            android:id="@+id/createiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -150,6 +154,7 @@
             ></ImageView>
 
         <ImageView
+            android:id="@+id/likesiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

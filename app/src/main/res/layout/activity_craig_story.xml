@@ -130,9 +130,7 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:shadowColor="#99000000"
-                    android:shadowDx="0dp"
-                    android:shadowDy="2dp"
-                    android:shadowRadius="4dp"
+
                     />
             </LinearLayout>
 

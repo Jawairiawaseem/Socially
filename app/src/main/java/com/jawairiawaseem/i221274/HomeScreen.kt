@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.jvm.java
 
 class HomeScreen : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -17,9 +18,20 @@ class HomeScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_home_screen)
 
-        val explore = findViewById<ImageView>(R.id.explore)
+        val exploreiv = findViewById<ImageView>(R.id.exploreiv)
         val direct = findViewById<ImageView>(R.id.direct)
         val profileiv = findViewById<ImageView>(R.id.profileiv)
+        val likesiv = findViewById<ImageView>(R.id.likesiv)
+        val createiv = findViewById<ImageView>(R.id.createiv)
+
+        createiv.setOnClickListener {
+            val intent = Intent(this, CreatePost::class.java)
+            startActivity(intent)
+        }
+        likesiv.setOnClickListener {
+            val intent = Intent(this, LikesPage::class.java)
+            startActivity(intent)
+        }
 
         profileiv.setOnClickListener {
             val intent= Intent(this, profilePage::class.java)
@@ -29,7 +41,7 @@ class HomeScreen : AppCompatActivity() {
             val intent= Intent(this, directMessages::class.java)
             startActivity(intent)
         }
-         explore.setOnClickListener {
+         exploreiv.setOnClickListener {
              val intent= Intent(this, ExplorePage::class.java)
              startActivity(intent)
          }

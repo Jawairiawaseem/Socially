@@ -31,6 +31,16 @@ class profilePage : AppCompatActivity() {
             val intent = Intent(this, ExplorePage::class.java)
             startActivity(intent)
         }
+        val createiv = findViewById<ImageView>(R.id.createiv)
+        createiv.setOnClickListener {
+            val intent = Intent(this, CreatePost::class.java)
+            startActivity(intent)
+        }
+        val likesiv = findViewById<ImageView>(R.id.likesiv)
+        likesiv.setOnClickListener {
+            val intent = Intent(this, LikesPage::class.java)
+            startActivity(intent)
+        }
 
         h1.setOnClickListener {
             val intent= Intent(this, highlight::class.java)
