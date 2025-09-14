@@ -13,6 +13,9 @@
     <color name="hint">#7CBDB3B3</color>
     <color name="searchbar">#3CBDB3B3</color>
     <color name="chatTopBar">#F8F8F8</color>
+    <color name="callScreenBg">#995A5B</color>
+    <color name="red">#B31418</color>
+    <color name="transparent">#00FFFFFF</color>
 
 
 </resources>

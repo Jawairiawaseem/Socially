@@ -1,8 +1,6 @@
 package com.jawairiawaseem.i221274
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.media.Image
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -10,20 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class chat1 : AppCompatActivity() {
+class callScreen : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_chat1)
-        val backbtn= findViewById<ImageView>(R.id.backbtn)
-        val call= findViewById<ImageView>(R.id.call)
-
-        call.setOnClickListener {
-            val intent = Intent(this, callScreen::class.java)
-            startActivity(intent)
-        }
-        backbtn.setOnClickListener {
+        setContentView(R.layout.activity_call_screen)
+        val hangupbtn = findViewById<ImageView>(R.id.hangupbtn)
+        hangupbtn.setOnClickListener {
             finish()
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

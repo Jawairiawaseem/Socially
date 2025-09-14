@@ -19,7 +19,12 @@ class HomeScreen : AppCompatActivity() {
 
         val explore = findViewById<ImageView>(R.id.explore)
         val direct = findViewById<ImageView>(R.id.direct)
+        val profileiv = findViewById<ImageView>(R.id.profileiv)
 
+        profileiv.setOnClickListener {
+            val intent= Intent(this, profilePage::class.java)
+            startActivity(intent)
+        }
         direct.setOnClickListener {
             val intent= Intent(this, directMessages::class.java)
             startActivity(intent)
