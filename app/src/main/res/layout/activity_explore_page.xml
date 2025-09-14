@@ -38,7 +38,9 @@
                 android:hint="Search"
                 android:textSize="20sp"
                 android:textColorHint="@color/reddish"
-                app:layout_constraintStart_toEndOf="@id/smallsearch">
+                app:layout_constraintStart_toEndOf="@id/smallsearch"
+                android:background="@android:color/transparent"
+                >
 
             </EditText>
 
@@ -68,6 +70,7 @@
                     ></Button>
 
                 <Button
+                    android:id="@+id/stylebtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/transparent"

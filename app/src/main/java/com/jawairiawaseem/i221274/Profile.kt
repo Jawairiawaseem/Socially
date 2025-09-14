@@ -1,6 +1,7 @@
 package com.jawairiawaseem.i221274
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -16,6 +17,12 @@ class Profile : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         val backarrow = findViewById<ImageView>(R.id.backarrow)
+        val followingiv = findViewById<ImageView>(R.id.followingiv)
+
+        followingiv.setOnClickListener {
+            val intent = Intent(this, ProfileFollow::class.java)
+            startActivity(intent)
+        }
         backarrow.setOnClickListener {
             finish()
         }

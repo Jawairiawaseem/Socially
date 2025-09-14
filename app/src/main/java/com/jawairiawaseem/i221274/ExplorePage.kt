@@ -3,6 +3,7 @@ package com.jawairiawaseem.i221274
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,9 +22,13 @@ class ExplorePage : AppCompatActivity() {
         val homeiv = findViewById<ImageView>(R.id.homeiv)
 
         val createiv = findViewById<ImageView>(R.id.createiv)
+        val style = findViewById<Button>(R.id.stylebtn)
+        val profileiv =  findViewById<ImageView>(R.id.profileiv)
 
-        val profileiv = findViewById<ImageView>(R.id.profileiv)
-
+        style.setOnClickListener {
+            val intent = Intent(this, HashTagSearch::class.java)
+            startActivity(intent)
+        }
         likesiv.setOnClickListener {
             val intent = Intent(this, LikesPage::class.java)
             startActivity(intent)
