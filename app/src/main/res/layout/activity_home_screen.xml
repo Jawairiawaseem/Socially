@@ -21,6 +21,7 @@
         >
 
         <ImageView
+            android:id="@+id/camiv"
             android:layout_width="29dp"
             android:layout_height="29dp"
             android:src="@drawable/camera"

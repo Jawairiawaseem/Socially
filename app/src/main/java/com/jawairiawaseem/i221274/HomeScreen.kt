@@ -23,6 +23,19 @@ class HomeScreen : AppCompatActivity() {
         val profileiv = findViewById<ImageView>(R.id.profileiv)
         val likesiv = findViewById<ImageView>(R.id.likesiv)
         val createiv = findViewById<ImageView>(R.id.createiv)
+        val camiv = findViewById<ImageView>(R.id.camiv)
+        val story5 = findViewById<ImageView>(R.id.story5)
+
+        story5.setOnClickListener {
+            val intent = Intent(this, CraigStory::class.java)
+            startActivity(intent)
+        }
+
+
+        camiv.setOnClickListener {
+            val intent = Intent(this, takePhoto::class.java)
+            startActivity(intent)
+        }
 
         createiv.setOnClickListener {
             val intent = Intent(this, CreatePost::class.java)
