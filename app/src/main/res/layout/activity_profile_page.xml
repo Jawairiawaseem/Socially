@@ -229,6 +229,7 @@
                     android:orientation="vertical"
                     >
                     <ImageView
+                        android:id="@+id/h1"
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:src="@drawable/h1"
@@ -251,6 +252,7 @@
                     android:orientation="vertical"
                     >
                     <ImageView
+                        android:id="@+id/h2"
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:src="@drawable/h2"
@@ -273,6 +275,7 @@
                     android:orientation="vertical"
                     >
                     <ImageView
+                        android:id="@+id/h3"
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:src="@drawable/h3"
@@ -358,6 +361,7 @@
         android:background="@color/white"
         >
         <ImageView
+            android:id="@+id/homeiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -366,7 +370,7 @@
             ></ImageView>
 
         <ImageView
-            android:id="@+id/explore"
+            android:id="@+id/exploreiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -375,6 +379,7 @@
             ></ImageView>
 
         <ImageView
+            android:id="@+id/createiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -383,6 +388,7 @@
             ></ImageView>
 
         <ImageView
+            android:id="@+id/likesiv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
