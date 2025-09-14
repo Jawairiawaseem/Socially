@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221274">
         <activity
+            android:name=".HashTagSearch"
+            android:exported="false" />
+        <activity
             android:name=".ProfileFollow"
             android:exported="false" />
         <activity
