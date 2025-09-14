@@ -11,6 +11,7 @@
     <color name="loginbtn2">#D09E9D</color>
     <color name="divider">#7CBDB3B3</color>
     <color name="hint">#7CBDB3B3</color>
+    <color name="searchbar">#3CBDB3B3</color>
 
 
 </resources>

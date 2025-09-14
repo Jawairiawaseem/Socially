@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221274">
         <activity
+            android:name=".chat1"
+            android:exported="false" />
+        <activity
+            android:name=".directMessages"
+            android:exported="false" />
+        <activity
             android:name=".ExplorePage"
             android:exported="false" />
         <activity
