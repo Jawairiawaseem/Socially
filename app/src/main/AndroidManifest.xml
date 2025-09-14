@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221274">
         <activity
+            android:name=".LikesPage2"
+            android:exported="false" />
+        <activity
+            android:name=".LikesPage"
+            android:exported="false" />
+        <activity
             android:name=".HashTagSearch"
             android:exported="false" />
         <activity
