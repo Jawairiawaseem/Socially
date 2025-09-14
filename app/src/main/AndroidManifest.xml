@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221274">
         <activity
+            android:name=".AddStory"
+            android:exported="false" />
+        <activity
             android:name=".CraigStory"
             android:exported="false" />
         <activity
