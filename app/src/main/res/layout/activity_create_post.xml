@@ -7,134 +7,130 @@
     android:layout_height="match_parent"
     tools:context=".CreatePost">
 
+    <!-- Top bar -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:background="@color/white"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/canceltv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
             android:text="Cancel"
             android:textColor="@color/reddish"
-
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="24dp"
             android:textSize="18sp"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
+            android:id="@+id/centerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recents"
+            android:textColor="@color/reddish"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:drawableRight="@drawable/downarrow"
             android:drawablePadding="4dp"
-            android:textColor="@color/reddish"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            />
         <TextView
             android:id="@+id/donetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
             android:text="Next"
             android:textColor="@color/reddish"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="24dp"
             android:textSize="18sp"
-            />
-
-
-
-
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- parent: ConstraintLayout -->
+    <!-- Scrollable content -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/topbar"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomTabs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"> <!-- or toTopOf your bottom bar -->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topbar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Big preview image (tap to choose) -->
             <FrameLayout
                 android:id="@+id/photoCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!-- image -->
                 <ImageView
                     android:id="@+id/postimage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:layout_marginTop="16dp"
-                    android:src="@drawable/createpostimage"/>
+                    android:src="@drawable/createpostimage" />
 
-                <!-- bottom-right overlay row -->
+                <!-- Optional overlay row (kept from your design) -->
                 <LinearLayout
                     android:id="@+id/overlayRow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
+                    android:clipToPadding="false"
                     android:gravity="end|center_vertical"
-                    android:padding="12dp"
-                    android:clipToPadding="false">
+                    android:padding="12dp">
 
                     <ImageButton
                         android:layout_width="36dp"
                         android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
                         android:background="@drawable/bg_circle_translucent"
                         android:padding="6dp"
                         android:src="@drawable/ic_one"
-                        app:tint="@android:color/white"
-                        android:layout_marginEnd="8dp"/>
+                        app:tint="@android:color/white" />
 
                     <ImageButton
                         android:layout_width="36dp"
                         android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
                         android:background="@drawable/bg_circle_translucent"
                         android:padding="6dp"
                         android:src="@drawable/ic_one"
-                        app:tint="@android:color/white"
-                        android:layout_marginEnd="8dp"/>
+                        app:tint="@android:color/white" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
                         android:background="@drawable/bg_pill_translucent"
-                        android:paddingHorizontal="12dp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="12dp">
 
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
+                            android:layout_marginEnd="8dp"
                             android:src="@drawable/ic_one"
-                            app:tint="@android:color/white"
-                            android:layout_marginEnd="8dp"/>
+                            app:tint="@android:color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -147,7 +143,16 @@
                 </LinearLayout>
             </FrameLayout>
 
+            <!-- NEW: caption -->
+            <EditText
+                android:id="@+id/etCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write a caption..."
+                android:padding="12dp"
+                android:maxLines="3" />
 
+            <!-- Your static grid image below the preview -->
             <ImageView
                 android:id="@+id/postgrid"
                 android:layout_width="match_parent"
@@ -158,52 +163,50 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-
-
-
+    <!-- Bottom tabs -->
     <LinearLayout
         android:id="@+id/bottomTabs"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:background="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tabLibrary"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:text="Library"
-            android:textStyle="bold"
-            android:textSize="14sp"
             android:textColor="@color/reddish"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tabPhoto"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:text="Photo"
-            android:textSize="14sp"
             android:textColor="@color/reddish"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tabVideo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:text="Video"
-            android:textSize="14sp"
             android:textColor="@color/reddish"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:textSize="14sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,14 +23,11 @@ class CreatePost : AppCompatActivity() {
     private lateinit var caption: EditText
     private lateinit var nextTv: TextView
     private lateinit var cancelTv: TextView
-
     private var pickedBase64: String = ""
 
     private val pickImage = registerForActivityResult(
         ActivityResultContracts.GetContent()
-    ) { uri: Uri? ->
-        if (uri != null) handlePick(uri)
-    }
+    ) { uri: Uri? -> if (uri != null) handlePick(uri) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,10 +41,8 @@ class CreatePost : AppCompatActivity() {
 
         cancelTv.setOnClickListener { finish() }
         imgPreview.setOnClickListener { pickImage.launch("image/*") }
-
         nextTv.setOnClickListener { uploadPost() }
 
-        // Insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
@@ -87,7 +82,8 @@ class CreatePost : AppCompatActivity() {
             commentCount = 0
         )
 
-        PostsRepository.createPost(post,
+        PostsRepository.createPost(
+            post,
             onOk = { Toast.makeText(this, "Posted!", Toast.LENGTH_SHORT).show(); finish() },
             onErr = { Toast.makeText(this, "Failed: ${it.message}", Toast.LENGTH_SHORT).show() }
         )
