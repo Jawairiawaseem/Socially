@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingBottom="12dp">
+
+    <!-- Top bar: username -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:paddingHorizontal="12dp" android:paddingTop="6dp">
+        <ImageView
+            android:id="@+id/imgPfp" android:layout_width="32dp" android:layout_height="32dp"
+            android:src="@drawable/smalljoshua"/>
+        <TextView
+            android:id="@+id/tvUsername" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold" android:textSize="14sp" android:layout_marginStart="8dp"
+            android:text="username"/>
+    </LinearLayout>
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/imgPost" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:adjustViewBounds="true" android:scaleType="centerCrop" android:layout_marginTop="6dp"/>
+
+    <!-- Actions -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingHorizontal="12dp" android:paddingTop="8dp">
+        <ImageView
+            android:id="@+id/btnLike" android:layout_width="28dp" android:layout_height="28dp"
+            android:src="@drawable/like"/>
+        <ImageView
+            android:id="@+id/btnComment" android:layout_width="28dp" android:layout_height="28dp"
+            android:src="@drawable/comment" android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- Counts -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp" android:paddingTop="4dp">
+        <TextView
+            android:id="@+id/tvLikes" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="0 likes" android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvComments" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="   0 comments"/>
+    </LinearLayout>
+
+    <!-- Caption -->
+    <TextView
+        android:id="@+id/tvCaption" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp" android:paddingTop="2dp" android:text=""/>
+</LinearLayout>

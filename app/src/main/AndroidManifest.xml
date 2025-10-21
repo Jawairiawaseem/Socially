@@ -14,6 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.I221274">
+
+        <activity android:name=".CommentsActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".LikesPage2"
             android:exported="false" />
