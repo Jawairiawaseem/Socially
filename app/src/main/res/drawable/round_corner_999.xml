@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 999dp makes it effectively circular for square views -->
+    <corners android:radius="999dp" />
+    <!-- Optional: a thin white border so the circle is visible on dark bg -->
+    <stroke android:width="2dp" android:color="#FFFFFFFF" />
+    <!-- Transparent fill; the ImageView content will show through -->
+    <solid android:color="@android:color/transparent" />
+</shape>

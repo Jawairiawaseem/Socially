@@ -7,351 +7,326 @@
     android:layout_height="match_parent"
     tools:context=".EditProfile">
 
+    <!-- Top bar -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:background="@color/white"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/canceltv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
             android:text="Cancel"
             android:textColor="@color/black"
-
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="24dp"
             android:textSize="18sp"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
+            android:id="@+id/titleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit Profile"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            />
         <TextView
             android:id="@+id/donetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:text="Done"
             android:textColor="@color/reddish"
             android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="24dp"
             android:textSize="18sp"
-            />
-
-
-
-
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Body -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/topbar"
-        >
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
+            <!-- Profile image + change -->
             <ImageView
+                android:id="@+id/ivProfile"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/editprofilephoto"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"
                 android:adjustViewBounds="true"
-                />
+                android:src="@drawable/editprofilephoto" />
+
             <TextView
+                android:id="@+id/tvChangePhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="Change Profile Photo"
                 android:textColor="@color/reddish"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                />
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/divider2"
-
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="16dp"
-                />
+                android:background="@color/divider2" />
+
+            <!-- Name -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10"
                 android:layout_marginLeft="12dp"
-                >
+                android:orientation="horizontal"
+                android:weightSum="10">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Name"
+                    android:text="Name" />
 
-
-                    />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="7"
-                    android:text="Jacob West"
-                    />
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/divider2"
-                android:layout_marginLeft="128dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="16dp"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10"
-                android:layout_marginLeft="12dp"
-                >
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="Username"
-
-
-                    />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="7"
-                    android:text="jacob_w"
-                    />
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/divider2"
-                android:layout_marginLeft="128dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="16dp"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10"
-                android:layout_marginLeft="12dp"
-                >
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="Website"
-
-
-                    />
                 <EditText
+                    android:id="@+id/etName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:hint="Website"
                     android:background="@null"
-                    android:textSize="14sp"
-
-
-                    />
-
-
+                    android:hint="Enter name"
+                    android:textSize="14sp" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/divider2"
                 android:layout_marginLeft="128dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="16dp"
-                />
+                android:background="@color/divider2" />
 
+            <!-- Username -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10"
                 android:layout_marginLeft="12dp"
-                >
+                android:orientation="horizontal"
+                android:weightSum="10">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Bio"
+                    android:text="Username" />
 
-
-                    />
-                <TextView
+                <EditText
+                    android:id="@+id/etUsername"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:text="Digital Goodies Designer @pixsellz. Everything is designed."
-                    />
-
+                    android:background="@null"
+                    android:hint="Enter username"
+                    android:textSize="14sp" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/divider2"
-
+                android:layout_marginLeft="128dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="16dp"
-                />
+                android:background="@color/divider2" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Website -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Switch to Professional Account"
-                android:textColor="@color/reddish"
                 android:layout_marginLeft="12dp"
-                />
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Website" />
+
+                <EditText
+                    android:id="@+id/etWebsite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:background="@null"
+                    android:hint="Website"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/divider2" />
+
+            <!-- Bio -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Bio" />
+
+                <EditText
+                    android:id="@+id/etBio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:background="@null"
+                    android:hint="Say something..."
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/divider2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="Switch to Professional Account"
+                android:textColor="@color/reddish" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
                 android:text="Private Information"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginTop="24dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginBottom="16dp"
-            />
+                android:textStyle="bold" />
 
+            <!-- Email row (shows Firebase email) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10"
                 android:layout_marginLeft="12dp"
-                >
+                android:orientation="horizontal"
+                android:weightSum="10">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Email"
+                    android:text="Email" />
 
-
-                    />
                 <TextView
+                    android:id="@+id/tvEmailValue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:text="jacobwest@gmail.com"
-                    />
-
+                    android:text="" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/divider2"
                 android:layout_marginLeft="128dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="16dp"
-                />
+                android:background="@color/divider2" />
 
+            <!-- Phone -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10"
                 android:layout_marginLeft="12dp"
-                >
+                android:orientation="horizontal"
+                android:weightSum="10">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Phone"
+                    android:text="Phone" />
 
-
-                    />
                 <TextView
+                    android:id="@+id/tvPhoneValue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:text="+1 123 456 7890"
-                    />
-
+                    android:text="+1 123 456 7890" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/divider2"
                 android:layout_marginLeft="128dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="16dp"
-                />
+                android:background="@color/divider2" />
 
+            <!-- Gender -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10"
                 android:layout_marginLeft="12dp"
-                >
+                android:orientation="horizontal"
+                android:weightSum="10">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Gender"
+                    android:text="Gender" />
 
-
-                    />
                 <TextView
+                    android:id="@+id/tvGenderValue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:text="Male"
-                    />
-
-
+                    android:text="Male" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/divider2"
                 android:layout_marginLeft="128dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="16dp"
-                />
-
+                android:background="@color/divider2" />
         </LinearLayout>
-
-
-
-
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

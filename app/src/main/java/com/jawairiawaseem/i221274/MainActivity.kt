@@ -8,17 +8,31 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.postDelayed
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import com.jawairiawaseem.i221274.data.AuthRepository
+import kotlinx.coroutines.launch
 import java.util.logging.Handler
+import kotlin.jvm.java
 
 class MainActivity : AppCompatActivity() {
+    private val authRepo = AuthRepository()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) // your splash layout
 
-        android.os.Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity2::class.java))
-            finish() // close splash so user cannot go back to it
-        }, 2000) // delay in ms
+        lifecycleScope.launch {
+            if (!authRepo.isLoggedIn()) {
+                startActivity(Intent(this@MainActivity, MainActivity2::class.java))
+                finish()
+                return@launch
+            }
+
+            val completed = try { authRepo.fetchProfileCompleted() } catch (_: Exception) { false }
+
+            val next = if (completed) HomeScreen::class.java else EditProfile::class.java
+            startActivity(Intent(this@MainActivity, next))
+            finish()
+        }
     }
 
 }

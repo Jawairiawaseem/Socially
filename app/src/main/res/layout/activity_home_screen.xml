@@ -84,135 +84,25 @@
            android:layout_height="wrap_content"
            android:orientation="vertical"
            >
-           <ScrollView
+           <HorizontalScrollView
+               android:id="@+id/storyscroll"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                app:layout_constraintTop_toBottomOf="@id/greybar"
-               android:id="@+id/storyscroll"
-               >
+               android:overScrollMode="never"
+               android:fillViewport="false"
+               android:scrollbars="none">
 
+               <!-- keep this container EMPTY; we will add children dynamically -->
                <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
                    android:id="@+id/storiesbar"
-
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
                    android:orientation="horizontal"
-                   android:weightSum="5"
-                   >
-                   <FrameLayout
-                       android:layout_width="0dp"
-                       android:layout_height="100dp"
-                       android:layout_weight="1"
-                       android:orientation="vertical"
-                       >
-                       <ImageView
-                           android:id="@+id/story1"
-                           android:layout_width="match_parent"
-                           android:src="@drawable/story"
-                           android:layout_height="match_parent"
-                           android:layout_marginBottom="12dp"
-                           ></ImageView>
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="Your Story"
-                           android:layout_gravity="bottom|center_horizontal"
+                   android:paddingStart="12dp"
+                   android:paddingEnd="12dp"/>
+           </HorizontalScrollView>
 
-                           ></TextView>
-                   </FrameLayout>
-
-
-
-                   <FrameLayout
-                       android:layout_width="0dp"
-                       android:layout_height="100dp"
-                       android:layout_weight="1"
-                       android:orientation="vertical"
-                       >
-                       <ImageView
-                           android:id="@+id/story2"
-                           android:layout_width="match_parent"
-                           android:src="@drawable/karenne"
-                           android:layout_height="match_parent"
-                           android:layout_marginBottom="12dp"
-                           ></ImageView>
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="karenne"
-                           android:layout_gravity="bottom|center_horizontal"
-
-                           ></TextView>
-                   </FrameLayout>
-
-                   <FrameLayout
-                       android:layout_width="0dp"
-                       android:layout_height="100dp"
-                       android:layout_weight="1"
-                       android:orientation="vertical"
-                       >
-                       <ImageView
-                           android:id="@+id/story3"
-                           android:layout_width="match_parent"
-                           android:src="@drawable/zackjohn"
-                           android:layout_height="match_parent"
-                           android:layout_marginBottom="12dp"
-                           ></ImageView>
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="zackjohn"
-                           android:layout_gravity="bottom|center_horizontal"
-
-                           ></TextView>
-                   </FrameLayout>
-
-                   <FrameLayout
-                       android:layout_width="0dp"
-                       android:layout_height="100dp"
-                       android:layout_weight="1"
-                       android:orientation="vertical"
-                       >
-                       <ImageView
-                           android:id="@+id/story4"
-                           android:layout_width="match_parent"
-                           android:src="@drawable/kieron"
-                           android:layout_height="match_parent"
-                           android:layout_marginBottom="12dp"
-                           ></ImageView>
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="kieron_d"
-                           android:layout_gravity="bottom|center_horizontal"
-
-                           ></TextView>
-                   </FrameLayout>
-
-                   <FrameLayout
-                       android:layout_width="0dp"
-                       android:layout_height="100dp"
-                       android:layout_weight="1"
-                       android:orientation="vertical"
-                       >
-                       <ImageView
-                           android:id="@+id/story5"
-                           android:layout_width="match_parent"
-                           android:src="@drawable/story"
-                           android:layout_height="match_parent"
-                           android:layout_marginBottom="12dp"
-                           ></ImageView>
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="Craig_"
-                           android:layout_gravity="bottom|center_horizontal"
-
-                           ></TextView>
-                   </FrameLayout>
-
-               </LinearLayout>
-           </ScrollView>
            <View
                android:id="@+id/greybar2"
                android:layout_width="match_parent"

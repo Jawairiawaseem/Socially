@@ -115,14 +115,23 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/storyImage"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/lowerBar"
-        android:src="@drawable/highlightpicture"
         android:scaleType="centerCrop"
-        app:shapeAppearanceOverlay="@style/Shape1"
-        />
+        android:visibility="gone"
+        app:shapeAppearanceOverlay="@style/Shape1" />
+
+    <VideoView
+        android:id="@+id/storyVideo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lowerBar"
+        android:visibility="gone"/>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lowerBar"
